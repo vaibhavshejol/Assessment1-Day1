@@ -21,7 +21,7 @@ public class Tast1ReverseEachWordOfData {
 	}
 
 	public static void main(String[] args) throws IOException {
-		System.out.println("Application is working properly....");
+		System.out.println("Application is working properly....\n");
 
 		// here we set the path of input file
 		FileReader f = new FileReader("D:\\Assessments\\Assessment1-Day1\\input.txt");
@@ -35,6 +35,7 @@ public class Tast1ReverseEachWordOfData {
 		// and here we read data from file and convert it into character array for the
 		// separating word because it help us to pick up single single word
 		String line;
+		System.out.println("\nOutput:\n");
 		while ((line = br.readLine()) != null) {
 			String[] words = line.split("\\s+");
 
@@ -46,6 +47,7 @@ public class Tast1ReverseEachWordOfData {
 			// here we write data in file which we reversed
 			bw.write(reversedLine.toString().trim());
 			bw.newLine();
+			System.out.println(reversedLine);
 		}
 		br.close();
 		bw.close();
